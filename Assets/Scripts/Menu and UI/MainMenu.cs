@@ -9,12 +9,14 @@ public class MainMenu : MonoBehaviour
     {
         levelSelectionCanvas.SetActive(true);
         mainMenuCanvas.SetActive(false);
+        SoundManager.Instance.StartSound();
     }
 
     public void BackButton()
     {
         mainMenuCanvas.SetActive(true);
         levelSelectionCanvas.SetActive(false);
+        SoundManager.Instance.BackSound();
     }
 
     public void LoadLevel(int levelNum)
@@ -22,6 +24,7 @@ public class MainMenu : MonoBehaviour
         LevelSelection.CurrLevel = levelNum;
         gameCanvas.SetActive(true);
         levelSelectionCanvas.SetActive(false);
+        SoundManager.Instance.LevelOpenSound();
     }
 
     public void BackToMenu()

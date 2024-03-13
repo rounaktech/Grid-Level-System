@@ -66,6 +66,7 @@ public class LevelSelection : MonoBehaviour
             completedLevels++;
             PlayerPrefs.SetInt(GlobalConstants.PREF_LEVEL, completedLevels);
         }
+        SoundManager.Instance.CompleteSound();
         buttonActivator();
         menu.BackToMenu();
     }
